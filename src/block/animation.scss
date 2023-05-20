@@ -1,6 +1,38 @@
 .box {
+  position: relative;
   width: 200px;
   height: 100px;
   background-color: aqua;
+  // animation-name: move;
+  // animation-duration: 500ms;
+  // animation-timing-function: ease-in-out;
+  // animation-iteration-count: 2;
+  // animation-direction: alternate;
+  // animation-delay: -200px;
+  // animation-fill-mode: backwards;
+  animation: radius 500ms linear 2 alternate;
+
+  &:hover {
+    animation-play-state: paused;
+  }
 }
 
+
+
+@keyframes move {
+  from {
+    left: 0;
+  } to {
+    left: 100px;
+  }
+}
+
+@keyframes radius {
+    0% {
+    border-radius: 0;
+  } 50% {
+    border-radius: 10%;
+  } 100% {
+    border-radius: 20%;
+  }
+}
